@@ -2,11 +2,22 @@ class Dog
   @@all = []
   
   def initialize
-    @@all << self
+    save
   end
   
   def self.all
     @@all
   end
+  
+  def save
+    @@all << self
+  end
+  
+  def self.print_all
+    @@all.each do |dogs|
+      puts dogs
+    end
+  end
+  
 end
 
